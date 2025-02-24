@@ -1,3 +1,9 @@
-h2 {
-    color: rgba(8, 51, 121, 0.706);
+@font-face {
+    font-family: "heading";
+    src: url(Shrikhand-Regular.ttf);
+}
+
+#heading { 
+    font-family: "heading";
+    font-size: 180px;
 }
