@@ -3,14 +3,24 @@
     src: url(Shrikhand-Regular.ttf);
 } */
 
-#heading { 
+/* #heading { 
     font-family: "heading";
     font-size: 180px;
-}
+} */
 
 .heading-box{
     display: block;
     background-color: black;
     Width: 1573px;
     height: 575px;
+}
+
+.main-text{
+    color: #FFF;
+    text-align: center;
+    font-family: "Lexend Deca";
+    font-size: 185px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 90%;
 }
