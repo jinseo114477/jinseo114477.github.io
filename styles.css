@@ -1,9 +1,15 @@
-@font-face {
+/* @font-face {
     font-family: "heading";
     src: url(Shrikhand-Regular.ttf);
-}
+} */
 
 #heading { 
     font-family: "heading";
     font-size: 180px;
+}
+
+.heading-box{
+    background-color: black;
+    Width: 1573px;
+    height: 575px;
 }
