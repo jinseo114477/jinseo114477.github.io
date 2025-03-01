@@ -9,6 +9,7 @@
 } */
 
 .heading-box{
+    position: absolute;
     background-color: black;
     Width: 1300px;
     height: 575px;
@@ -16,6 +17,8 @@
 }
 
 .main-text{
+    position: relative;
+    left: 50px;
     color: #FFF;
     text-align: center;
     font-family: "Lexend Deca";
