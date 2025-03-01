@@ -9,10 +9,10 @@
 } */
 
 .heading-box{
-    display: block;
     background-color: black;
-    Width: 1573px;
+    Width: 1300px;
     height: 575px;
+    flex-shrink: 0;
 }
 
 .main-text{
