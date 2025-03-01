@@ -9,6 +9,7 @@
 }
 
 .heading-box{
+    display: block;
     background-color: black;
     Width: 1573px;
     height: 575px;
