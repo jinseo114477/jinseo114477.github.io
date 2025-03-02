@@ -15,6 +15,11 @@ a {
     color: inherit;
 }
 
+@font-face {
+    font-family: "custom1";
+    src: url("AbhayaLibre-SemiBold.ttf") format("ttf");
+    
+}
 /* Navigation */
 .navigation-box {
     position: absolute;
@@ -28,9 +33,10 @@ a {
 .navigation-home, 
 .navigation-stories {
     position: relative;
-    top:2vh;
-    left: 81.5vw;
-    margin: 2rem;
+    top:1.95vh;
+    left: 0.9vw;
+    margin-left: 2rem;
+    margin-right: 3.5rem;
     color: #0B0B0B;
     font-size: 1rem;
     font-weight: 500;
@@ -76,12 +82,12 @@ a {
 .big-text {
     position: relative;
     color: black;
-    font-weight: 700;
     word-wrap: break-word;
 }
 
 
 .small-text {
+    font-weight: 700;
     font-size: 1.73vh;
     line-height: 1.79vh;
 }
@@ -89,12 +95,14 @@ a {
 
 
 .big-text {
+    font-weight: 700;
     font-size: 4.93vh;
     line-height: 5.16vh;
 }
 
 .big-text:hover {
-    color: brown; /* Change link color on hover */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
   } 
 
 /* Character Heading */
@@ -111,7 +119,7 @@ a {
 .heading-box-royal {
     position: absolute;
     top: 50px;
-    background-color: #6B2900;
+    background-color: #7B0D0D;
     width: 100vw;
     height: 72.9vh;
     display: flex;
@@ -121,7 +129,7 @@ a {
 }
 
 .sub-text-royal {
-    color: #FFDB98;
+    color: #5299D4;
     text-align: center;
     font-family: "Epilogue", sans-serif;
     font-size: 4.56vh;
@@ -130,7 +138,7 @@ a {
 }
 
 .main-text-royal {
-    color: #FF98BC;
+    color: #FFFFFF;
     text-align: center;
     font-family: "Epilogue", sans-serif;
     font-size: 24.6vh;
@@ -150,7 +158,119 @@ a {
 }
 
 .royal-text {
-    color: #515151;
+    color: #36454F;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 108%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* Etheline Specific */
+.heading-box-etheline {
+    position: absolute;
+    top: 50px;
+    background-color: #9CAF88;;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-etheline {
+    color: #62350E;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-etheline {
+    color: #F7F4E9;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-etheline-text {
+    position: absolute;
+    top: 78.76vh;
+    background-color: #FF8C82;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.etheline-text {
+    color: #FFCDC9;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 108%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* CHas Specific */
+.heading-box-chas {
+    position: absolute;
+    top: 50px;
+    background-color: #D72638;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-chas{
+    color: #FFD575;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-chas {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-chas-text {
+    position: absolute;
+    top: 78.76vh;
+    background-color: white;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chas-text {
+    color: #003049;
     font-family: "Rosario", sans-serif;
     font-size: 4.1vh;
     font-weight: 700;
@@ -169,6 +289,10 @@ a {
 }
 
 
+.big-text:hover {
+    color: white;
+
+  } 
 
 
   /* Container for the hoverable text */
@@ -180,15 +304,15 @@ a {
     transition: color 0.3s;
   }
   .hover-container:hover {
-    color: brown; /* Change text to brown on hover */
+    color:white;
   }
 
   /* Hidden text */
     .hover-info {
       visibility: hidden;
       opacity: 0;
-      background-color: #6B2900;
-      color: #FF98BC;
+      background-color: black;
+      color: white;
       text-align: left;
       border-radius: 5px;
       padding: 10px 15px;
@@ -197,7 +321,7 @@ a {
       top: 150%; /* Position above the text */
       left: 50%;
       transform: translateX(-50%);
-      transition: opacity 0.3s;
+      transition: opacity 1.5s;
       z-index: 1; /* Ensure it stays above other elements */
       white-space: normal;
     }
@@ -207,6 +331,9 @@ a {
       visibility: visible;
       opacity: 1;
     }
+
+   
+      
 
 
 /* breakpoints for Responsiveness haven't learned in class
