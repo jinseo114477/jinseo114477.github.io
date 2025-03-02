@@ -187,8 +187,8 @@ a {
     .hover-info {
       visibility: hidden;
       opacity: 0;
-      background-color: black;
-      color: white;
+      background-color: #6B2900;
+      color: #FF98BC;
       text-align: left;
       border-radius: 5px;
       padding: 10px 15px;
