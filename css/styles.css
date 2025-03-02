@@ -1,0 +1,271 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+.navigation-box {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 5vh;
+    flex-shrink: 0;
+    z-index: 1000;
+}
+
+.navigation-home, 
+.navigation-stories {
+    position: relative;
+    top:2vh;
+    left: 81.5vw;
+    margin: 2rem;
+    color: #0B0B0B;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* General Layout */
+.heading-box {
+    position: absolute;
+    top: 50px;
+    background-color: black;
+    width: 100vw;
+    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text {
+    color: #FFF;
+    text-align: center;
+    font-family: "Lexend Deca";
+    font-size: 23.6vh;
+    font-weight: 700;
+    line-height: 90%;
+
+}
+
+/* Text Layer */
+.text-layer {
+    position: absolute;
+    top: 79.46vh;
+    height: auto;
+    margin-bottom: 20px; 
+    margin-top: 2vh; 
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+
+.small-text, 
+.big-text {
+    position: relative;
+    color: black;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+
+.small-text {
+    font-size: 1.73vh;
+    line-height: 1.79vh;
+}
+
+
+
+.big-text {
+    font-size: 4.93vh;
+    line-height: 5.16vh;
+}
+
+.big-text:hover {
+    color: brown; /* Change link color on hover */
+  } 
+
+/* Character Heading */
+.character-heading-small {
+    color: #FFDB98;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 2.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+/* Royal Specific */
+.heading-box-royal {
+    position: absolute;
+    top: 50px;
+    background-color: #6B2900;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-royal {
+    color: #FFDB98;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-royal {
+    color: #FF98BC;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-royal-text {
+    position: absolute;
+    top: 78.76vh;
+    background-color: #FFDB98;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.royal-text {
+    color: #515151;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 108%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.image{
+    height: 10%;
+    width: 10%;
+}
+
+
+
+
+  /* Container for the hoverable text */
+  .hover-container {
+    position: relative; /* Important for positioning the tooltip */
+    display: inline-block;
+    cursor: pointer;
+    color: black; /* Original text color */
+    transition: color 0.3s;
+  }
+  .hover-container:hover {
+    color: brown; /* Change text to brown on hover */
+  }
+
+  /* Hidden text */
+    .hover-info {
+      visibility: hidden;
+      opacity: 0;
+      background-color: black;
+      color: white;
+      text-align: left;
+      border-radius: 5px;
+      padding: 10px 15px;
+      width: 800px;
+      position: absolute;
+      top: 150%; /* Position above the text */
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s;
+      z-index: 1; /* Ensure it stays above other elements */
+      white-space: normal;
+    }
+
+    /* Show the text on hover */
+    .hover-container:hover .hover-info {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+/* breakpoints for Responsiveness haven't learned in class
+@media (max-width: 768px) {
+    .main-text {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .main-text-royal {
+        font-size: clamp(2rem, 5vw, 4rem);
+    }
+
+    .sub-text-royal {
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+    }
+
+    .royal-text {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .navigation-home, 
+    .navigation-stories {
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+    }
+
+    .heading-box-royal {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation-home, 
+    .navigation-stories {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .main-text {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .main-text-royal {
+        font-size: clamp(2rem, 5vw, 4rem);
+    }
+
+    .sub-text-royal {
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+    }
+
+    .royal-text {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .navigation-home, 
+    .navigation-stories {
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+    }
+
+    .heading-box-royal {
+        padding: 1.5rem;
+    } */
+    
+
