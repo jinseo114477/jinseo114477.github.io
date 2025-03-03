@@ -818,7 +818,7 @@ a {
 }
 
 .ari-text, .uzi-text {
-    color: black;
+    color: #013651;
     font-family: "Rosario", sans-serif;
     font-size: 4.1vh;
     font-weight: 700;
@@ -844,7 +844,7 @@ a {
 }
 
 .back-button-ari-text {
-    background-color: white;
+    color: #013651;
     position:relative;
     bottom: -4.7vh;
     height: 10%;
@@ -982,7 +982,7 @@ a {
     text-align: center;
     border-radius: 0.5rem;
     padding: 1rem 1.5rem;
-    width: 56vw;
+    width: 57vw;
     position: absolute;
     transform: translateX(-50%);
     transition: opacity 1.5s;
@@ -1026,13 +1026,13 @@ a {
 .hover-info {
     bottom: auto;
     top: 100%;
-    left: 50%;
+    left: 52%;
 }
 
 .hover-info2 {
     top: auto;
     bottom: 100%;
-    left: 50%;
+    left: 65%;
     transform: translateX(-50%) translateY(-0.5rem);
 }
 
