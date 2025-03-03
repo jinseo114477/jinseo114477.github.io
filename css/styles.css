@@ -21,6 +21,24 @@ a {
     
 }
 
+.fixed-home-button {
+    position: fixed; /* Fixes the position on the screen */
+    top: 2vh; /* Distance from the top */
+    left: 1.5vw; /* Distance from the left */
+    z-index: 1000; /* Ensures it's above other elements */
+    display: inline-block; /* Makes it easy to handle the image */
+}
+
+.home-image {
+    width: 4vw; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    
+}
+
+.fixed-home-button:hover .home-image {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
 /* Navigation
 .navigation-box {
     position: fixed;  Keeps it at the top 
@@ -980,6 +998,31 @@ a {
 
 }
 
+.hover-info5{
+    visibility: hidden;
+    opacity: 0;
+    background-color: black; /* White background */
+    color: white; /* Black text */
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    width: auto; /* Automatically adjusts to text length */
+    min-width: 10vw; /* Prevents overly wide boxes */
+    max-height: 6.3vh;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    white-space: normal;
+    bottom: auto;
+    top: 100%;
+    left: 50%;
+}
+
 .hover-info {
     bottom: auto;
     top: 100%;
@@ -1011,6 +1054,8 @@ a {
 
 }
 
+
+
 .hover-container:hover .hover-info {
     visibility: visible;
     opacity: 1;
@@ -1029,6 +1074,11 @@ a {
 
 
 .hover-container:hover .hover-info4 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hover-container:hover .hover-info5{
     visibility: visible;
     opacity: 1;
 }
