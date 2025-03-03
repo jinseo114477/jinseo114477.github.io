@@ -798,10 +798,11 @@ a {
     font-family: "roboto";
     font-size: 4.1vh;
     font-weight: 500;
-    line-height: 140%;
+    line-height: 120%;
     margin-top: 45px;
     padding: 0;
     width: 90%;
+    letter-spacing: 0.02vw;
     max-width: 800px;
     text-align: center;
     white-space: pre-wrap;
@@ -900,7 +901,7 @@ a {
 .back-button-ari-box {
     position: absolute;
     background-color: white;
-    height: 52vh;
+    height: 35vh;
     width: 50%;
     display: flex; /* Enables Flexbox */
     justify-content: center; /* Centers horizontally */
@@ -1207,3 +1208,5 @@ a {
   .no:hover {
     color: black;
   }
+
+  
