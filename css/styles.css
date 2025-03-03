@@ -81,6 +81,8 @@ a {
     text-align: center;
     font-family: "Lexend Deca";
     font-size: 23.6vh;
+    height: auto;
+    width: auto;
     font-weight: 700;
     line-height: 90%;
 
