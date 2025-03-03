@@ -1077,7 +1077,7 @@ a {
     max-height: 6.3vh;
     position: absolute;
     transform: translateX(-50%);
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 1s, visibility 3s ease;
     z-index: 1;
     display: block;
     font-size: 1rem;
