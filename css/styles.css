@@ -20,33 +20,35 @@ a {
     src: url("AbhayaLibre-SemiBold.ttf") format("ttf");
     
 }
-/* Navigation */
-.navigation-box {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    height: 5vh;
-    flex-shrink: 0;
-    z-index: 1000;
-}
 
-.navigation-home, 
+/* Navigation
+.navigation-box {
+    position: fixed;  Keeps it at the top 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    z-index: 1000;
+} */
+
+/* .navigation-home, 
 .navigation-stories {
     position: relative;
-    top:1.95vh;
+    top:1.8vh;
     left: 0.9vw;
     margin-left: 2rem;
     margin-right: 3.5rem;
     color: #0B0B0B;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
-}
+} */
 
 /* General Layout */
 .heading-box {
     position: absolute;
-    top: 50px;
+    /* top: 50px; */
     background-color: black;
     width: 100vw;
     height: 72vh;
@@ -69,9 +71,9 @@ a {
 /* Text Layer */
 .text-layer {
     position: absolute;
-    top: 79.46vh;
+    top: 72.46vh;
     height: auto;
-    margin-bottom: 20px; 
+    margin-bottom: 5px; 
     margin-top: 2vh; 
     width: 100%;
     background-color: white;
@@ -92,18 +94,13 @@ a {
     line-height: 1.79vh;
 }
 
-
-
 .big-text {
     font-weight: 700;
     font-size: 4.93vh;
     line-height: 5.16vh;
 }
 
-.big-text:hover {
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-  } 
+
 
 /* Character Heading */
 .character-heading-small {
@@ -118,7 +115,7 @@ a {
 /* Royal Specific */
 .heading-box-royal {
     position: absolute;
-    top: 50px;
+    /* top: 50px; */
     background-color: #7B0D0D;
     width: 100vw;
     height: 72.9vh;
@@ -148,7 +145,7 @@ a {
 
 .box-royal-text {
     position: absolute;
-    top: 78.76vh;
+    top: 72.76vh;
     background-color: #FFDB98;
     width: 100vw;
     height: auto;
@@ -162,7 +159,7 @@ a {
     font-family: "Rosario", sans-serif;
     font-size: 4.1vh;
     font-weight: 700;
-    line-height: 108%;
+    line-height: 110%;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -174,7 +171,7 @@ a {
 /* Etheline Specific */
 .heading-box-etheline {
     position: absolute;
-    top: 50px;
+    /* top: 50px; */
     background-color: #9CAF88;;
     width: 100vw;
     height: 72.9vh;
@@ -204,7 +201,7 @@ a {
 
 .box-etheline-text {
     position: absolute;
-    top: 78.76vh;
+    top: 72.76vh;
     background-color: #FF8C82;
     width: 100vw;
     height: auto;
@@ -218,7 +215,7 @@ a {
     font-family: "Rosario", sans-serif;
     font-size: 4.1vh;
     font-weight: 700;
-    line-height: 108%;
+    line-height: 110%;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -230,7 +227,7 @@ a {
 /* CHas Specific */
 .heading-box-chas {
     position: absolute;
-    top: 50px;
+    /* top: 50px; */
     background-color: #D72638;
     width: 100vw;
     height: 72.9vh;
@@ -260,7 +257,7 @@ a {
 
 .box-chas-text {
     position: absolute;
-    top: 78.76vh;
+    top: 72.76vh;
     background-color: white;
     width: 100vw;
     height: auto;
@@ -274,7 +271,7 @@ a {
     font-family: "Rosario", sans-serif;
     font-size: 4.1vh;
     font-weight: 700;
-    line-height: 108%;
+    line-height: 110%;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -283,116 +280,773 @@ a {
     white-space: pre-wrap;
 }
 
-.image{
+/* Margot Specific */
+.heading-box-margot {
+    position: absolute;
+    /* top: 50px; */
+    background-color: #5B607E;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-margot{
+    color: #B2BEB5;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-margot {
+    color: #F6CF45;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-margot-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #C19A6B;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.margot-text {
+    color: #FFECD6;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* Richie Specific */
+.heading-box-richie {
+    position: absolute;
+    /* top: 50px; */
+    background-color: #1D3E65;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-richie{
+    color: #95B3B0;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-richie {
+    color: #E6CCB2;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-richie-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #FFD670;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.richie-text {
+    color: #8B3030;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* Eli Specific */
+.heading-box-eli {
+    position: absolute;
+    /* top: 50px; */
+    background-color: #317773;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-eli{
+    color: #EDE9D5;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-eli {
+    color: #F6BD60;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-eli-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #EDE9D5;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eli-text {
+    color: #D35C47;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* Henry Specific */
+.heading-box-henry {
+    position: absolute;
+    /* top: 50px; */
+    background-color: #F4C6A7;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-henry{
+    color: #034D73;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-henry {
+    color: #4A6B67;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-henry-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #708D9C;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.henry-text {
+    color: #F8F1E5;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* raleigh Specific */
+.heading-box-raleigh {
+    position: absolute;
+    /* top: 50px; */
+    background-color: #0D1B2A;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-raleigh{
+    color: #D5C8AE;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-raleigh {
+    color: #D6D2E9;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-raleigh-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #76877D;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.raleigh-text {
+    color: #D5C8AE;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* pagod Specific */
+.heading-box-pagoda {
+    position: absolute;
+    /* top: 50px; */
+    background-color: #8C2F39;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-pagoda {
+    color: #C18785;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-pagoda {
+    color: #D9A441;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    margin-top: 2vh;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-pagoda-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #397980;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagoda-text {
+    color: #C18785;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* dusty Specific */
+.heading-box-dusty {
+    position: absolute;
+    /* top: 50px; */
+    background-color: #59748C;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-dusty {
+    color: #BEC2C3;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-dusty {
+    color: #CDA75D;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    margin-top: 2vh;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-dusty-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #D6C3A5;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dusty-text {
+    color: #A35638;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* narrator Specific */
+.heading-box-narrator {
+    position: absolute;
+    /* top: 50px; */
+    background-color: #485A28;
+    width: 100vw;
+    height: 72.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-text-narrator {
+    color: #FF6DA3;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.main-text-narrator {
+    color: #FFCA6D;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    margin-top: 2vh;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-narrator-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #FF6DA3;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.narrator-text {
+    color: #FFCEDF;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* ari-uzi Specific */
+.heading-box-ari-uzi {
+    /* position: absolute; */
+    /* top: 50px; */
+    background-color: #D72638;
+    width: 100vw;
+    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.sub-text-ari-uzi {
+    color: #9CD5FF;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%; /* Adjusted for better spacing */
+}
+
+.main-text-ari-uzi {
+    color: #F7F4E9;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+    margin-top: 2vh; /* Adds spacing above the main text */
+}
+
+.ari-uzi-main-text-span{
+    margin:9.5vw; 
+}
+
+.ari-sub-text-span {
+    margin: 11.5vw; 
+    color: #FFD575;
+}
+
+.uzi-sub-text-span {
+    margin: 11.5vw; 
+    color: #FFD575;
+}
+
+.container {
+    margin-top: 6vh; /* Adds spacing below the fixed navigation */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    max-width: 100vw;
+}
+
+.box-ari-text, .box-uzi-text {
+    background-color: white;
+    flex: 1; /* Makes columns take equal width */
+    max-width: 130%; /* Restricts each column width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left:155px; /* Adds spacing inside the boxes */
+    max-width: 100%;
+    height: auto;
+}
+
+.ari-text, .uzi-text {
+    color: black;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 110%;
+    text-align: center;
+    white-space: pre-wrap;
+    width: 90%;
+    /* margin-top: 52vh; */
+   
+}
+
+.back-button-ari-box {
+    position: absolute;
+    background-color: white;
+    height: 52vh;
+    width: 50%;
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    top: 403%; /* Center vertically relative to the viewport */
+    left: 50%; /* Center horizontally relative to the viewport */
+    transform: translate(-50%, -50%); /* Offset the box by half its size to center */
+}
+
+.back-button-ari-text {
+    background-color: white;
+    position:relative;
+    bottom: -4.7vh;
     height: 10%;
-    width: 10%;
+    width: 100%;
+    text-align: center;
+    display: flex; /* Ensures content inside is flex-aligned */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    font-family: "custom1", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+/* other Specific */
+.heading-box-other{
+    position: absolute;
+    background-color: #915C83;
+    width: 100vw;
+    height: 80.9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text-other {
+    position: relative;
+    color: #E8F765;
+    text-align: center;
+    font-family: "custom1", sans-serif;
+    margin-top: .5vh;
+    font-size: 24.6vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.sub-text-other {
+    position: relative;
+    margin-top: -9vh;
+    color: #E8F765;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 4.56vh;
+    font-weight: 700;
+    line-height: 93%;
+}
+
+.box-other-text {
+    position: absolute;
+    top: 72.76vh;
+    background-color: #79E8D9;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.other-text-name {
+    color: #915C83;
+    font-family: "Custom1", sans-serif;
+    font-size: 6.1vh;
+    font-weight: 900;
+    line-height: 110%;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.other-text-lines{
+    color: #E26D45;
+    font-family: "Rosario", sans-serif;
+    font-size: 4.1vh;
+    font-weight: 600;
+    line-height: 110%;
+    margin-top: 45px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    white-space: pre-wrap;
 }
 
 
-.big-text:hover {
+.image{
+    height: 10%;
+    width: 10%;
+    height: auto; 
+    display: block; /* Ensures it doesn't have extra space */
+    margin: 0 auto; /* Centers the image */
+
+}
+
+
+
+/* .big-text:hover {
     color: white;
 
   } 
 
+.small-text:hover {
+    color: white;
+
+  }  */
+
+
+
 
   /* Container for the hoverable text */
-  .hover-container {
+.hover-container {
     position: relative; /* Important for positioning the tooltip */
     display: inline-block;
     cursor: pointer;
     color: black; /* Original text color */
     transition: color 0.3s;
-  }
-  .hover-container:hover {
-    color:white;
-  }
-
-  /* Hidden text */
-    .hover-info {
-      visibility: hidden;
-      opacity: 0;
-      background-color: black;
-      color: white;
-      text-align: left;
-      border-radius: 5px;
-      padding: 10px 15px;
-      width: 800px;
-      position: absolute;
-      top: 150%; /* Position above the text */
-      left: 50%;
-      transform: translateX(-50%);
-      transition: opacity 1.5s;
-      z-index: 1; /* Ensure it stays above other elements */
-      white-space: normal;
-    }
-
-    /* Show the text on hover */
-    .hover-container:hover .hover-info {
-      visibility: visible;
-      opacity: 1;
-    }
-
-   
-      
-
-
-/* breakpoints for Responsiveness haven't learned in class
-@media (max-width: 768px) {
-    .main-text {
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
-    }
-
-    .main-text-royal {
-        font-size: clamp(2rem, 5vw, 4rem);
-    }
-
-    .sub-text-royal {
-        font-size: clamp(0.8rem, 3vw, 1.2rem);
-    }
-
-    .royal-text {
-        font-size: clamp(0.8rem, 2.5vw, 1rem);
-    }
-
-    .navigation-home, 
-    .navigation-stories {
-        font-size: clamp(0.7rem, 2vw, 0.9rem);
-    }
-
-    .heading-box-royal {
-        padding: 1.5rem;
-    }
 }
 
-@media (max-width: 480px) {
-    .navigation-home, 
-    .navigation-stories {
-        font-size: clamp(0.8rem, 2.5vw, 1rem);
-    }
+.hover-container:hover {
+    color: black; /* Ensure the letter R remains visible on hover */
+}
 
-    .main-text {
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
-    }
+.hover-letter {
+    color: white; /* Ensures the letter is always visible */
+}
 
-    .main-text-royal {
-        font-size: clamp(2rem, 5vw, 4rem);
-    }
+/* Hidden text */
+.hover-info, .hover-info2, .hover-info3, .hover-info4 {
+    visibility: hidden;
+    opacity: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    width: 56vw;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: opacity 1.5s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-weight: 300;
 
-    .sub-text-royal {
-        font-size: clamp(0.8rem, 3vw, 1.2rem);
-    }
+}
 
-    .royal-text {
-        font-size: clamp(0.8rem, 2.5vw, 1rem);
-    }
+.hover-info {
+    bottom: auto;
+    top: 100%;
+    left: 50%;
+}
 
-    .navigation-home, 
-    .navigation-stories {
-        font-size: clamp(0.7rem, 2vw, 0.9rem);
-    }
+.hover-info2 {
+    top: auto;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-0.5rem);
+}
 
-    .heading-box-royal {
-        padding: 1.5rem;
-    } */
-    
+/* for henry hover text box*/
+.hover-info3{
+    top: auto;
+    bottom: 100%;
+    left: -2%;
+    transform: translateX(-50%) translateY(-0.5rem);
+
+}
+
+/* for pagoda hover text box */
+.hover-info4{
+    top: auto;
+    bottom: 100%;
+    left: -13.3%;
+    transform: translateX(-50%) translateY(-0.5rem);
+
+}
+
+.hover-container:hover .hover-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hover-container:hover .hover-info2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.hover-container:hover .hover-info3 {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.hover-container:hover .hover-info4 {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+.hover-container:hover .small-text {
+    color: white;
+    visibility: visible;
+    opacity: 1;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.hover-container:hover .big-text {
+    color: white;
+    visibility: visible;
+    opacity: 1;
+    text-shadow: 2px 2px 4px #000000;
+}
 
