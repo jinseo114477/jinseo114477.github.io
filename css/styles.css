@@ -1,4 +1,43 @@
 /* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +59,8 @@ a {
     src: url("AbhayaLibre-SemiBold.ttf") format("ttf");
     
 }
+
+
 
 .fixed-home-button {
     position: fixed; /* Fixes the position on the screen */
@@ -155,12 +196,13 @@ a {
 }
 
 .main-text-royal {
-    color: #FFFFFF;
+    color: #FFC9C3;
     text-align: center;
     font-family: "Epilogue", sans-serif;
     font-size: 24.6vh;
     font-weight: 700;
-    line-height: 93%;
+    line-height: 100%;
+    margin-top: 1.35vh;
 }
 
 .box-royal-text {
@@ -179,7 +221,8 @@ a {
     font-family: "Rosario", sans-serif;
     font-size: 4.1vh;
     font-weight: 700;
-    line-height: 110%;
+    line-height: 120%;
+    letter-spacing:0.035vw;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -204,7 +247,7 @@ a {
 .sub-text-etheline {
     color: #62350E;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Abhaya+Libre";
     font-size: 4.56vh;
     font-weight: 700;
     line-height: 93%;
@@ -213,9 +256,9 @@ a {
 .main-text-etheline {
     color: #F7F4E9;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Abhaya+Libre";
     font-size: 24.6vh;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 93%;
 }
 
@@ -232,10 +275,11 @@ a {
 
 .etheline-text {
     color: #FFCDC9;
-    font-family: "Rosario", sans-serif;
+    font-family: "Questrial";
     font-size: 4.1vh;
     font-weight: 700;
-    line-height: 110%;
+    line-height: 130%;
+    letter-spacing:0.035vw;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -260,7 +304,7 @@ a {
 .sub-text-chas{
     color: #FFD575;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Montserrat Subrayada";
     font-size: 4.56vh;
     font-weight: 700;
     line-height: 93%;
@@ -269,10 +313,11 @@ a {
 .main-text-chas {
     color: #FFFFFF;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family:sans-serif;
+    font-weight: regular;
     font-size: 24.6vh;
     font-weight: 700;
-    line-height: 93%;
+    line-height: 96%;
 }
 
 .box-chas-text {
@@ -288,10 +333,11 @@ a {
 
 .chas-text {
     color: #003049;
-    font-family: "Rosario", sans-serif;
+    font-family: "Roboto";
     font-size: 4.1vh;
-    font-weight: 700;
+    font-weight: 1000;
     line-height: 110%;
+    letter-spacing: 0.025vw;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -316,19 +362,21 @@ a {
 .sub-text-margot{
     color: #B2BEB5;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Figtree";
     font-size: 4.56vh;
     font-weight: 700;
     line-height: 93%;
+    letter-spacing: .1vw;
 }
 
 .main-text-margot {
     color: #F6CF45;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Figtree";
+    letter-spacing:0vw;
     font-size: 24.6vh;
-    font-weight: 700;
-    line-height: 93%;
+    font-weight: 900;
+    line-height: 96%;
 }
 
 .box-margot-text {
@@ -344,10 +392,11 @@ a {
 
 .margot-text {
     color: #FFECD6;
-    font-family: "Rosario", sans-serif;
+    font-family: "Questrial";
     font-size: 4.1vh;
     font-weight: 700;
-    line-height: 110%;
+    line-height: 140%;
+    letter-spacing:0.06vw;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -372,7 +421,7 @@ a {
 .sub-text-richie{
     color: #95B3B0;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Castoro Titling";
     font-size: 4.56vh;
     font-weight: 700;
     line-height: 93%;
@@ -380,11 +429,14 @@ a {
 
 .main-text-richie {
     color: #E6CCB2;
+    margin-top: 1vh;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Castoro";
     font-size: 24.6vh;
-    font-weight: 700;
+    font-weight: 300;
     line-height: 93%;
+    letter-spacing:0.3vw;
+    margin-top: 1vh;
 }
 
 .box-richie-text {
@@ -400,7 +452,7 @@ a {
 
 .richie-text {
     color: #8B3030;
-    font-family: "Rosario", sans-serif;
+    font-family: "Crimson pro";
     font-size: 4.1vh;
     font-weight: 700;
     line-height: 110%;
@@ -410,6 +462,7 @@ a {
     max-width: 800px;
     text-align: center;
     white-space: pre-wrap;
+    letter-spacing:0.035vw;
 }
 
 /* Eli Specific */
@@ -428,19 +481,19 @@ a {
 .sub-text-eli{
     color: #EDE9D5;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Caprasimo";
     font-size: 4.56vh;
-    font-weight: 700;
+    font-weight: regular;
     line-height: 93%;
 }
 
 .main-text-eli {
     color: #F6BD60;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Caprasimo";
     font-size: 24.6vh;
-    font-weight: 700;
-    line-height: 93%;
+    font-weight: 100;
+    line-height: 98%;
 }
 
 .box-eli-text {
@@ -456,8 +509,9 @@ a {
 
 .eli-text {
     color: #D35C47;
-    font-family: "Rosario", sans-serif;
+    font-family: "Archivo Narrow";
     font-size: 4.1vh;
+    font-style: italic;
     font-weight: 700;
     line-height: 110%;
     margin-top: 45px;
@@ -466,6 +520,7 @@ a {
     max-width: 800px;
     text-align: center;
     white-space: pre-wrap;
+    letter-spacing: 0.02vw;
 }
 
 /* Henry Specific */
@@ -484,19 +539,19 @@ a {
 .sub-text-henry{
     color: #034D73;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Calistoga";
     font-size: 4.56vh;
-    font-weight: 700;
+    font-weight: regular;
     line-height: 93%;
 }
 
 .main-text-henry {
     color: #4A6B67;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Calistoga";
     font-size: 24.6vh;
-    font-weight: 700;
-    line-height: 93%;
+    font-weight: regular;
+    line-height: 96%;
 }
 
 .box-henry-text {
@@ -512,10 +567,10 @@ a {
 
 .henry-text {
     color: #F8F1E5;
-    font-family: "Rosario", sans-serif;
+    font-family: "Asap";
     font-size: 4.1vh;
-    font-weight: 700;
-    line-height: 110%;
+    font-weight: 500;
+    line-height: 120%;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -540,7 +595,7 @@ a {
 .sub-text-raleigh{
     color: #D5C8AE;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Cormorant Garamond";
     font-size: 4.56vh;
     font-weight: 700;
     line-height: 93%;
@@ -549,9 +604,9 @@ a {
 .main-text-raleigh {
     color: #D6D2E9;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Cormorant Garamond";
     font-size: 24.6vh;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 93%;
 }
 
@@ -568,16 +623,17 @@ a {
 
 .raleigh-text {
     color: #D5C8AE;
-    font-family: "Rosario", sans-serif;
+    font-family: "Source Sans Pro";
     font-size: 4.1vh;
-    font-weight: 700;
-    line-height: 110%;
+    font-weight: 500;
+    line-height: 120%;
     margin-top: 45px;
     padding: 0;
     width: 90%;
     max-width: 800px;
     text-align: center;
     white-space: pre-wrap;
+    letter-spacing: 0.01vw;
 }
 
 /* pagod Specific */
@@ -596,7 +652,7 @@ a {
 .sub-text-pagoda {
     color: #C18785;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Spectral";
     font-size: 4.56vh;
     font-weight: 700;
     line-height: 93%;
@@ -605,7 +661,7 @@ a {
 .main-text-pagoda {
     color: #D9A441;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Spectral";
     margin-top: 2vh;
     font-size: 24.6vh;
     font-weight: 700;
@@ -625,14 +681,14 @@ a {
 
 .pagoda-text {
     color: #C18785;
-    font-family: "Rosario", sans-serif;
+    font-family: "Rubik";
     font-size: 4.1vh;
     font-weight: 700;
     line-height: 110%;
     margin-top: 45px;
     padding: 0;
     width: 90%;
-    max-width: 800px;
+    max-width: 500px;
     text-align: center;
     white-space: pre-wrap;
 }
@@ -653,19 +709,19 @@ a {
 .sub-text-dusty {
     color: #BEC2C3;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "Belanosima";
     font-size: 4.56vh;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 93%;
 }
 
 .main-text-dusty {
     color: #CDA75D;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Belanosima";
     margin-top: 2vh;
     font-size: 24.6vh;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 93%;
 }
 
@@ -682,7 +738,7 @@ a {
 
 .dusty-text {
     color: #A35638;
-    font-family: "Rosario", sans-serif;
+    font-family: "Comfortaa";
     font-size: 4.1vh;
     font-weight: 700;
     line-height: 110%;
@@ -710,7 +766,7 @@ a {
 .sub-text-narrator {
     color: #FF6DA3;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
+    font-family: "roboto";
     font-size: 4.56vh;
     font-weight: 700;
     line-height: 93%;
@@ -719,11 +775,12 @@ a {
 .main-text-narrator {
     color: #FFCA6D;
     text-align: center;
-    font-family: "custom1", sans-serif;
-    margin-top: 2vh;
+    font-family: "Playfair Display";
+
     font-size: 24.6vh;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 93%;
+    letter-spacing: .5vw;
 }
 
 .box-narrator-text {
@@ -739,10 +796,10 @@ a {
 
 .narrator-text {
     color: #FFCEDF;
-    font-family: "Rosario", sans-serif;
+    font-family: "roboto";
     font-size: 4.1vh;
-    font-weight: 700;
-    line-height: 110%;
+    font-weight: 500;
+    line-height: 140%;
     margin-top: 45px;
     padding: 0;
     width: 90%;
@@ -768,20 +825,19 @@ a {
 .sub-text-ari-uzi {
     color: #9CD5FF;
     text-align: center;
-    font-family: "Epilogue", sans-serif;
     font-size: 4.56vh;
-    font-weight: 700;
-    line-height: 93%; /* Adjusted for better spacing */
+    font-weight: 600;
+    line-height: 93%; 
 }
 
 .main-text-ari-uzi {
     color: #F7F4E9;
     text-align: center;
-    font-family: "custom1", sans-serif;
+    font-family: "Bakbak One";
     font-size: 24.6vh;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 93%;
-    margin-top: 2vh; /* Adds spacing above the main text */
+    margin-top: 1vh; /* Adds spacing above the main text */
 }
 
 .ari-uzi-main-text-span{
@@ -789,13 +845,15 @@ a {
 }
 
 .ari-sub-text-span {
-    margin: 11.5vw; 
+    margin: 10vw; 
     color: #FFD575;
+    font-family: "poppins"
 }
 
 .uzi-sub-text-span {
     margin: 11.5vw; 
     color: #FFD575;
+    font-family: "Karla", sans-serif;
 }
 
 .container {
@@ -821,15 +879,23 @@ a {
 
 .ari-text, .uzi-text {
     color: #013651;
-    font-family: "Rosario", sans-serif;
     font-size: 4.1vh;
-    font-weight: 700;
-    line-height: 110%;
+    font-weight: 500;
     text-align: center;
     white-space: pre-wrap;
     width: 90%;
     /* margin-top: 52vh; */
    
+}
+
+.ari-text{
+    font-family: "Karla", sans-serif;
+    line-height: 110%;
+}
+.uzi-text{
+    font-family: "Poppins";
+    line-height: 130%;
+
 }
 
 .back-button-ari-box {
@@ -855,9 +921,9 @@ a {
     display: flex; /* Ensures content inside is flex-aligned */
     justify-content: center; /* Centers text horizontally */
     align-items: center; /* Centers text vertically */
-    font-family: "custom1", sans-serif;
+    font-family: "Bakbak", sans-serif;
     font-size: 4.1vh;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 93%;
 }
 
@@ -878,7 +944,6 @@ a {
     color: #E8F765;
     text-align: center;
     font-family: "custom1", sans-serif;
-    margin-top: .5vh;
     font-size: 24.6vh;
     font-weight: 700;
     line-height: 93%;
@@ -921,9 +986,9 @@ a {
 
 .other-text-lines{
     color: #E26D45;
-    font-family: "Rosario", sans-serif;
+    font-family: "Custom1", sans-serif;
     font-size: 4.1vh;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 110%;
     margin-top: 45px;
     padding: 0;
@@ -982,7 +1047,7 @@ a {
     background-color: black;
     color: white;
     text-align: center;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     padding: 1rem 1.5rem;
     width: 57vw;
     position: absolute;
@@ -1006,7 +1071,7 @@ a {
     background-color: black; /* White background */
     color: white; /* Black text */
     text-align: center;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     padding: 1rem 1.5rem;
     width: auto; /* Automatically adjusts to text length */
     min-width: 10vw; /* Prevents overly wide boxes */
