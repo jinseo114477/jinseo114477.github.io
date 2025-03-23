@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Dazzed";
+    src: url("dazzed.otf") format("opentype"); 
+}
+
+@font-face {
+    font-family: "Reckless-bold";
+    src: url("reckless.otf") format("opentype"); 
+}
+
+@font-face {
+    font-family: "reckless";
+    src: url("RecklessNeueTRIAL-Regular") format("opentype"); 
+}
+
+.whole-page {
+    display: flex;
+    flex-direction: row;
+    width: fit-content; /* Adjusts width dynamically based on content */
+    min-width: 100vw; /* Ensures it doesn't shrink too much */
+    max-height: 100vh; /* Limits height to viewport */
+    overflow: auto; /* Adds scrolling if content exceeds height */
+    background-color: #002FA7;
+    white-space: nowrap; /* Ensures text doesn’t wrap */
+    padding: 2vw; /* Adds spacing so text isn't touching edges */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.gap {
+    width: 100vw;
+}
+
+.small, .small-heading {
+    color: white;
+    text-decoration: none; /* Removes underline */
+    font-family: "reckless";
+    font-size: 0.75rem; 
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 0.8vw; 
+    outline: none;
+}
+
+.small-heading {
+    margin-top: 0.8vw; 
+}
+
+
+.small a {
+    color: inherit; /* Inherit white color from .small */
+    text-decoration: none; 
+}
+
+.small a:hover {
+    color: #FFD1D1; 
+}
+
+.small a:visited {
+    color: white; 
+}
+
+.small a:active {
+    color: #FFD1D1; 
+}
+
+#black-color {
+    color: black;
+}
+
+.space {
+    width: 11vw; 
+    height: 106vh; 
+}
+
+#text-scale,
+#text-scale-mirrored,
+#text-scale1,
+#text-scale-mirrored1,
+#text-scale2,
+#text-scale-mirrored2,
+#text-scale3,
+#text-scale-mirrored3,
+#text-scale4 {
+    font-family: "Dazzed";
+    font-style: normal;
+    line-height: normal;
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+    font-weight: 775;
+    white-space: nowrap; 
+}
+
+#text-scale {
+    color: #FFD1D1;
+}
+
+#text-scale-mirrored {
+    color: #FFD1D1;
+}
+
+#text-scale1 {
+    color: black;
+}
+
+#text-scale-mirrored1 {
+    color: black;
+}
+
+#text-scale2 {
+    color: #FFD1D1;
+}
+
+#text-scale-mirrored2 {
+    color: #FFD1D1;
+}
+
+#text-scale3 {
+    color: white;
+}
+
+#text-scale-mirrored3 {
+    color: white;
+}
+
+#text-scale4 {
+    color: #FFD1D1;
+}
