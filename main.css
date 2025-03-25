@@ -13,11 +13,15 @@
     src: url("RecklessNeueTRIAL-Regular") format("opentype"); 
 }
 
+body{
+    margin:0;
+}
+
 .whole-page {
     display: flex;
     flex-direction: row;
     width: fit-content; /* Adjusts width dynamically based on content */
-    min-width: 100vw; /* Ensures it doesn't shrink too much */
+    min-width: 80vw; /* Ensures it doesn't shrink too much */
     max-height: 100vh; /* Limits height to viewport */
     overflow: auto; /* Adds scrolling if content exceeds height */
     background-color: #002FA7;
@@ -75,7 +79,7 @@
 
 .space {
     width: 11vw; 
-    height: 106vh; 
+    height: 96vh; 
 }
 
 #text-scale,
