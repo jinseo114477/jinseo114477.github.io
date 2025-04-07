@@ -34,34 +34,25 @@ const firebaseConfig = {
     const storageRef = storage.ref('images/' + file.name);
     const uploadTask = storageRef.put(file);
   
-    uploadTask.on(
-      "state_changed",
-      (snapshot) => {
-        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log(`Upload is ${progress}% done`);
-      },
-      (error) => {
-        console.error("Upload failed:", error);
-        alert("Something went wrong while uploading the image.");
-      },
-      () => {
-        uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-          const userData = {
-            name: name,
-            major: major,
-            imageUrl: downloadURL
-          };
+    uploadTask.then(() => {
+      uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+        const userData = {
+          name: name,
+          major: major,
+          imageUrl: downloadURL
+        };
   
-          const ref = database.ref("imageCooper");
-          ref.push(userData);
+        const ref = database.ref("imageCooper");
+        ref.push(userData);
   
-          displayImage(downloadURL);
-        });
-      }
-    );
+        displayImage(downloadURL);
+      });
+    }).catch((error) => {
+      console.error("Upload failed:", error);
+      alert("Something went wrong while uploading the image.");
+    });
   });
   
-
   function displayImage(url) {
     const img = document.createElement("img");
     img.src = url;
