@@ -1,4 +1,3 @@
-// Firebase configuration (initialize only once)
 const firebaseConfig = {
     apiKey: "AIzaSyCv187JHuSoN_0ahDMAS_Goy1HZx64AnXE",
     authDomain: "cooper-image-hub.firebaseapp.com",
@@ -13,18 +12,15 @@ const firebaseConfig = {
     firebase.initializeApp(firebaseConfig);
   }
   
-  // Firebase Storage and Database references
   const storage = firebase.storage();
   const database = firebase.database();
   
-  // DOM elements
   const nameInput = document.getElementById("nameInput");
   const majorSelect = document.getElementById("majorSelect");
   const fileInput = document.getElementById("fileInput");
   const uploadButton = document.getElementById("uploadButton");
   const gallery = document.getElementById("gallery");
   
-  // Handle file upload and store data
   uploadButton.addEventListener("click", () => {
     const name = nameInput.value;
     const major = majorSelect.value;
@@ -35,11 +31,9 @@ const firebaseConfig = {
       return;
     }
   
-    // Firebase Storage reference for the file
     const storageRef = storage.ref('images/' + file.name);
     const uploadTask = storageRef.put(file);
   
-    // Monitor upload process
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -51,27 +45,23 @@ const firebaseConfig = {
         alert("Something went wrong while uploading the image.");
       },
       () => {
-        // On successful upload, get the image URL
         uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-          // Store data in Firebase Realtime Database
           const userData = {
             name: name,
             major: major,
             imageUrl: downloadURL
           };
   
-          // Reference to the "inspoArchive" path in the database
-          const ref = database.ref("inspoArchive");
+          const ref = database.ref("imageCooper");
           ref.push(userData);
   
-          // Display the uploaded image
           displayImage(downloadURL);
         });
       }
     );
   });
   
-  // Display uploaded image
+
   function displayImage(url) {
     const img = document.createElement("img");
     img.src = url;
