@@ -1,19 +1,17 @@
-// Firebase config
 const firebaseConfig = {
     apiKey: "AIzaSyCv187JHuSoN_0ahDMAS_Goy1HZx64AnXE",
     authDomain: "cooper-image-hub.firebaseapp.com",
     projectId: "cooper-image-hub",
-    storageBucket: "cooper-image-hub.appspot.com", // ✅ corrected domain
+    storageBucket: "cooper-image-hub.appspot.com", 
     messagingSenderId: "760469167320",
     appId: "1:760469167320:web:3a69e38627e7947aeecbad",
     measurementId: "G-SLWXW38BMG"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
 const storage = firebase.storage();
-
-// DOM references
 const fileInput = document.getElementById("fileInput");
 const uploadButton = document.getElementById("uploadButton");
 const gallery = document.getElementById("gallery");
