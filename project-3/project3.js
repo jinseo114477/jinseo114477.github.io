@@ -30,7 +30,6 @@ const firebaseConfig = {
     });
   });
   
-  // Show image on the page
   function showImage(url) {
     const img = document.createElement("img");
     img.src = url;
