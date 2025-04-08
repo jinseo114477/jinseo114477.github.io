@@ -19,14 +19,14 @@ body {
   }
   
   button {
-    background-color: #0077ff;
+    background-color: plum;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   button:hover {
-    background-color: #005fd1;
+    background-color: white;
   }
   
   #gallery {
