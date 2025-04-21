@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Sandwich</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="home">
+  <div class="home-container">
+    <div id="result-screen" style="display: flex;">
+      <div class="sandwich-area">
+        <img src="images/background-home.png" />
+        <div id="final-sandwich"></div>
+    
+  </div>
+</div>
+<button class="ingredient-btn top-right" onclick="makeAnother()">Make Another Sandwich</button>
+</div>
+
+  <script>
+    const savedSandwich = JSON.parse(localStorage.getItem("sandwich"));
+
+    if (savedSandwich && savedSandwich.length > 0) {
+      const container = document.getElementById("final-sandwich");
+
+      savedSandwich.forEach((src, i) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.style.position = "absolute";
+        img.style.width = "100%"; 
+        img.style.zIndex = i + 1;
+        container.appendChild(img);
+      });
+    }
+
+    function makeAnother() {
+      localStorage.removeItem("sandwich"); 
+      window.location.href = "builder.html"; 
+    }
+  </script>
+</body>
+</html>

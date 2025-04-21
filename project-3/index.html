@@ -8,24 +8,20 @@
 </head>
 <body class="home">
   <div class="home-container">
-    <div class="sandwich-on-plate">
-      <img src="images/background-home.png" class="background" alt="Plate" />
-      <div id="saved-sandwich-stack"></div>
+
+    <div id="start-screen">
+      <button onclick="location.href='builder.html'">READY TO EAT A SANDWICH?</button>
     </div>
-    <button onclick="location.href='builder.html'" class="ingredient-btn">Make Another Sandwich</button>
+
+    <div id="result-screen" style="display:none;">
+      <div class="sandwich-area">
+        <img src="images/background-home.png" class="background" />
+        <div id="final-sandwich"></div>
+      </div>
+      <button class="ingredient-btn top-right" onclick="makeAnother()">Make Another Sandwich</button>
+    </div>
   </div>
 
-  <script>
-    const savedStack = JSON.parse(localStorage.getItem("sandwich")) || [];
-    const stackDiv = document.getElementById("saved-sandwich-stack");
-
-    savedStack.forEach((src, index) => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.classList.add("ingredient-image");
-      img.style.zIndex = index + 2;
-      stackDiv.appendChild(img);
-    });
-  </script>
+  <script src="home.js"></script>
 </body>
 </html>
