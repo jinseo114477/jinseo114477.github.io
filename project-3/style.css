@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "umami";
+    src: url("font/AtUmamiTRIAL-Black.otf") format("opentype"); 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #ffe4e1;
+  }
+  
+  .home-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/background-home.jpg') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .builder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -5%;
+    padding: 0;
+  }
+  
+  .sandwich-area {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    margin: -3.5rem 0;
+  }
+  
+  .background {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #ingredient-stack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #ingredient-stack img {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: -10px;
+    max-width: 80%;
+    z-index: 1000;
+    margin-top:-6.8%;
+
+  }
+  
+  .ingredient-list button {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .ingredient-btn {
+    background-color: transparent; /* No background color */
+    border: 5rem solid white; /* Black border */
+    font-size: 1rem; /* Font size in rem for scaling */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    margin: 0.5em; /* Margin for spacing between buttons */
+    width: auto; /* Width will auto adjust based on content */
+  }
+  
+  .ingredient-btn:hover {
+    background-color: #ffe0b2;
+    transform: scale(1.05);
+  }
+  
+
+.ingredient-btn {
+    background-color: transparent; /* No background color */
+    border: 2px solid #000; /* Black border */
+    padding: 1em 2em; /* Padding in relative units */
+    font-size: 1rem; /* Font size in rem for scaling */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    margin: 0.5em; /* Margin for spacing between buttons */
+    width: auto; /* Width will auto adjust based on content */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .ingredient-btn {
+      font-size: 0.9rem; /* Smaller font size for larger screens */
+      padding: 0.8em 1.6em; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ingredient-btn {
+      font-size: 0.8rem; /* Smaller font size for tablets */
+      padding: 0.6em 1.2em; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ingredient-btn {
+      font-size: 0.7rem; /* Even smaller font size for mobile */
+      padding: 0.5em 1em; /* Adjust padding */
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
+  /* Hover effect for buttons */
+  .ingredient-btn:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    border-color: #007BFF; /* Border color change on hover */
+  }
+  

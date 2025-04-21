@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Build Your Sandwich</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="top-controls">
+        <button class="ingredient-btn reset-btn" onclick="resetSandwich()">Reset</button>
+        <button class="ingredient-btn undo-btn" onclick="undoIngredient()">Undo</button>
+      </div>
+  <div class="builder-container">
+
+    <div class="sandwich-area">
+      <img src="images/background-builder.png" class="background" alt="Plate with Bread" />
+      <div id="ingredient-stack"></div>
+    </div>
+
+    <div class="ingredient-list">
+        <button class="ingredient-btn" onclick="addIngredient('butter')">butter</button>
+        <button class="ingredient-btn" onclick="addIngredient('mayonnaise')">mayonnaise</button>
+        <button class="ingredient-btn" onclick="addIngredient('mustard')">mustard</button>
+        <button class="ingredient-btn" onclick="addIngredient('ketchup')">ketchup</button>
+        <button class="ingredient-btn" onclick="addIngredient('peanutbutter')">peanut butter</button>
+        <button class="ingredient-btn" onclick="addIngredient('nutella')">nutella</button>
+
+        <button class="ingredient-btn" onclick="addIngredient('banana')">banana</button>
+        <button class="ingredient-btn" onclick="addIngredient('blueberry')">blueberry</button>
+        <button class="ingredient-btn" onclick="addIngredient('fig')">fig</button>
+        <button class="ingredient-btn" onclick="addIngredient('kiwi')">kiwi</button>
+        <button class="ingredient-btn" onclick="addIngredient('pineapple')">pineapple</button>
+        <button class="ingredient-btn" onclick="addIngredient('strawberry')">strawberry</button>
+
+        <button class="ingredient-btn" onclick="addIngredient('avocado')">avocado</button>
+        <button class="ingredient-btn" onclick="addIngredient('cucumber')">cucumber</button>
+        <button class="ingredient-btn" onclick="addIngredient('pickledcucumber')">pickled cucumber</button>
+        <button class="ingredient-btn" onclick="addIngredient('arugula')">arugula</button>
+        <button class="ingredient-btn" onclick="addIngredient('mushroom')">mushroom</button>
+        <button class="ingredient-btn" onclick="addIngredient('onion')">onion</button>
+        <button class="ingredient-btn" onclick="addIngredient('olive')">olive</button>
+
+        <button class="ingredient-btn" onclick="addIngredient('boiledegg')">boiled egg</button>
+        <button class="ingredient-btn" onclick="addIngredient('friedegg')">fried egg</button>
+        <button class="ingredient-btn" onclick="addIngredient('bacon')">bacon</button>
+        <button class="ingredient-btn" onclick="addIngredient('salami')">salami</button>
+        <button class="ingredient-btn" onclick="addIngredient('sausage')">sausage</button>
+        <button class="ingredient-btn" onclick="addIngredient('shrimp')">shrimp</button>
+        <button class="ingredient-btn" onclick="addIngredient('salmon')">salmon</button>
+        <button class="ingredient-btn" onclick="addIngredient('tuna')">tuna</button>
+
+        <button class="ingredient-btn" onclick="addIngredient('cheese')">cheese</button>
+        <button class="ingredient-btn" onclick="addIngredient('bread')">bread</button>
+        <button class="ingredient-btn" onclick="addIngredient('sushi')">sushi</button>
+
+
+
+        
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+
+</html>
