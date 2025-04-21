@@ -20,6 +20,11 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  .background-result{
+    width:100%
+
+  }
   
   .builder-container {
     display: flex;
@@ -123,11 +128,11 @@ body {
   
   #final-sandwich {
     position: relative;
-    width: 9350%; /* Adjust the width of the final sandwich container */
-    top: 10rem;
+    width: 10000%; 
+    top: 9rem;
     right: 9rem;
-    height: auto; /* Maintain the aspect ratio */
-    margin: 0 auto; /* Center the sandwich on the plate */
+    height: auto; 
+    margin: 0 auto; 
   }
   
   #final-sandwich img {

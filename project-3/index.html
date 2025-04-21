@@ -8,14 +8,14 @@
 </head>
 <body class="home">
   <div class="home-container">
-
+    <!-- Start Screen -->
     <div id="start-screen">
-      <button onclick="location.href='builder.html'">READY TO EAT A SANDWICH?</button>
+      <button class="ingredient-btn top-right" onclick="location.href='builder.html'">READY TO EAT A SANDWICH?</button>
     </div>
 
-    <div id="result-screen" style="display:none;">
+     <div id="result-screen" style="display:none;">
       <div class="sandwich-area">
-        <img src="images/background-home.png" class="background" />
+        <img src="images/background-home.png" class="background" alt="Plate" />
         <div id="final-sandwich"></div>
       </div>
       <button class="ingredient-btn top-right" onclick="makeAnother()">Make Another Sandwich</button>

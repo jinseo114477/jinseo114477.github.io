@@ -14,9 +14,9 @@
         <div id="final-sandwich"></div>
     
   </div>
-</div>
-<button class="ingredient-btn top-right" onclick="makeAnother()">Make Another Sandwich</button>
-</div>
+  </div>
+      <button class="ingredient-btn top-right" onclick="makeAnother()">Make Another Sandwich</button>
+    </div>
 
   <script>
     const savedSandwich = JSON.parse(localStorage.getItem("sandwich"));
@@ -38,6 +38,6 @@
       localStorage.removeItem("sandwich"); 
       window.location.href = "builder.html"; 
     }
-  </script>
+  </script> 
 </body>
 </html>
