@@ -24,7 +24,7 @@ function addIngredient(type) {
   ingredientStack.push(img);
   stack.appendChild(img);
 
-  // Save the sandwich stack to localStorage
+
   saveSandwichToLocalStorage();
 }
 
@@ -37,7 +37,7 @@ function resetSandwich() {
   const stack = document.getElementById("ingredient-stack");
   stack.innerHTML = "";
   ingredientStack.length = 0;
-  localStorage.removeItem("sandwich"); // Clear saved sandwich when reset
+  localStorage.removeItem("sandwich");
 }
 
 function undoIngredient() {
@@ -45,15 +45,15 @@ function undoIngredient() {
     const stack = document.getElementById("ingredient-stack");
     const last = ingredientStack.pop();
     stack.removeChild(last);
-    saveSandwichToLocalStorage(); // Update localStorage after undo
+    saveSandwichToLocalStorage(); 
   }
 }
 
-// Save sandwich to localStorage when ready to eat
+
 function saveSandwich() {
   const sandwichImages = ingredientStack.map(img => img.src);
   localStorage.setItem("sandwich", JSON.stringify(sandwichImages));
-  window.location.href = "result.html"; // Redirect to result page
+  window.location.href = "result.html"; 
 }
 
 function goHome() {
