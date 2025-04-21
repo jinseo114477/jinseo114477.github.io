@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,24 @@
 </head>
 <body class="home">
   <div class="home-container">
-    <button onclick="location.href='builder.html'">READY TO EAT A SANDWICH?</button>
+    <div class="sandwich-on-plate">
+      <img src="images/background-home.png" class="background" alt="Plate" />
+      <div id="saved-sandwich-stack"></div>
+    </div>
+    <button onclick="location.href='builder.html'" class="ingredient-btn">Make Another Sandwich</button>
   </div>
+
+  <script>
+    const savedStack = JSON.parse(localStorage.getItem("sandwich")) || [];
+    const stackDiv = document.getElementById("saved-sandwich-stack");
+
+    savedStack.forEach((src, index) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.classList.add("ingredient-image");
+      img.style.zIndex = index + 2;
+      stackDiv.appendChild(img);
+    });
+  </script>
 </body>
 </html>

@@ -38,3 +38,10 @@ function undoIngredient() {
     stack.removeChild(last);
   }
 }
+
+function goHome() {
+    const stackData = ingredientStack.map(img => img.src);
+    localStorage.setItem("sandwich", JSON.stringify(stackData));
+    window.location.href = "index.html";
+  }
+  
