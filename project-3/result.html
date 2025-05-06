@@ -10,13 +10,14 @@
   <div class="home-container">
     <div id="result-screen" style="display: flex;">
       <div class="sandwich-area">
-        <img src="images/background-home.png" />
+        <!-- <img src="images/background-home.png"/> -->
         <div id="final-sandwich"></div>
-    
-  </div>
-  </div>
-      <button class="ingredient-btn top-right" onclick="makeAnother()">Make Another Sandwich</button>
+      </div>
     </div>
+      <div>
+        <button class="ingredient-btn top-right" onclick="makeAnother()">MAKE ANOTHER TOAST</button>
+      </div>
+  </div>
 
   <script>
     const savedSandwich = JSON.parse(localStorage.getItem("sandwich"));
