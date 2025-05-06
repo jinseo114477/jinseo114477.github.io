@@ -1,10 +1,10 @@
 let focusInput, breakInput, cycleInput, startBtn;
 
-let state = 'idle'; // 'focus' | 'break' | 'done'
+let state = 'idle'; 
 let focusDuration, breakDuration;
 let startTime, breakStartTime;
 let threadPoints = [];
-let pastCycles = []; // ← stores completed focus threads
+let pastCycles = []; 
 let x, y, vx;
 
 let totalCycles = 1;
@@ -40,7 +40,7 @@ function startClock() {
   breakDuration = bm * 60 * 1000;
   totalCycles = cc;
   currentCycle = 1;
-  pastCycles = []; // reset past cycles
+  pastCycles = []; 
 
   focusInput.attribute('disabled', '');
   breakInput.attribute('disabled', '');
@@ -82,7 +82,7 @@ function draw() {
     threadPoints.push({ x, y });
 
     if (fraction >= 1) {
-      pastCycles.push([...threadPoints]); // save current thread
+      pastCycles.push([...threadPoints]); 
       state = 'break';
       breakStartTime = millis();
     }
@@ -93,7 +93,7 @@ function draw() {
 
     background(255);
 
-    // draw previous threads (faint + instantly)
+  
     stroke(255, 0, 0, 50);
     noFill();
     for (let path of pastCycles) {
@@ -104,7 +104,7 @@ function draw() {
       endShape();
     }
 
-    // draw current thread shrinking
+
     stroke(255, 0, 0);
     let remaining = floor(threadPoints.length * (1 - fraction));
     if (remaining > 1) {
