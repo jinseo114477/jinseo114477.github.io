@@ -1048,8 +1048,8 @@ a {
     color: white;
     text-align: center;
     /* border-radius: 0.5rem; */
-    padding: 1rem 1.5rem;
-    width: 57vw;
+    padding: .7rem 1.5rem;
+    width: 25vw;
     position: absolute;
     transform: translateX(-50%);
     transition: opacity 1.5s;
@@ -1068,12 +1068,12 @@ a {
 .hover-info5{
     visibility: hidden;
     opacity: 0;
-    background-color: black; /* White background */
-    color: white; /* Black text */
+    background-color: black; 
+    color: white; 
     text-align: center;
     /* border-radius: 0.5rem; */
-    padding: 1rem 1.5rem;
-    width: auto; /* Automatically adjusts to text length */
+    padding: .7rem 1.5rem;
+    width: 50vw;
     min-width: 10vw; /* Prevents overly wide boxes */
     max-height: 6.3vh;
     position: absolute;
@@ -1184,7 +1184,7 @@ a {
 
 .button {
     position:relative;
-    top: -37vh;
+    top: -27vh;
     display: flex;
     justify-content: center;
     align-items: center;
