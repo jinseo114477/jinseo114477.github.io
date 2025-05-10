@@ -46,7 +46,7 @@ body{
     font-weight: 700;
     line-height: 16rem;
     transform: skew(0deg, -19deg);
-    max-width: 100%; /* Prevents overflowing horizontally */
+    max-width: 100%;
     max-height: 100%;
     /* margin-top: none; */
     top: -10.5rem;
