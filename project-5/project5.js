@@ -41,6 +41,11 @@ function startClock() {
   breakInput.value(bm);
   cycleInput.value(cc);
 
+  // 🧼 Only clear if previous session was fully completed
+  if (state === 'done') {
+    clear();
+  }
+
   focusDuration = fm * 60 * 1000;
   breakDuration = bm * 60 * 1000;
   totalCycles = cc;
@@ -90,6 +95,7 @@ function draw() {
   if (paused || state === 'idle' || state === 'done') return;
 
   if (state === 'focus') {
+    stroke(255, 0, 0); // Solid red
     let elapsed = millis() - startTime;
     let fraction = elapsed / focusDuration;
 
@@ -111,7 +117,7 @@ function draw() {
     threadPoints.push({ x, y });
 
     if (fraction >= 1) {
-      pastCycles.push([...threadPoints]); 
+      pastCycles.push([...threadPoints]);
       state = 'break';
       breakStartTime = millis();
     }
@@ -122,11 +128,10 @@ function draw() {
 
     background(255);
 
-    // Draw faint traces from past cycles except current one
+    // Faint lines from all past focus threads
     stroke(255, 0, 0, 50);
     noFill();
-    for (let i = 0; i < pastCycles.length - 1; i++) {
-      let path = pastCycles[i];
+    for (let path of pastCycles) {
       beginShape();
       for (let pt of path) {
         vertex(pt.x, pt.y);
@@ -134,26 +139,26 @@ function draw() {
       endShape();
     }
 
-    // Animate retrieval of current thread
-    let trimmedLength = floor(threadPoints.length * (1 - fraction));
-    if (trimmedLength > 1) {
-      stroke(255, 0, 0);
+    // Faint full line of current thread as trace
+    stroke(255, 0, 0, 50);
+    beginShape();
+    for (let pt of threadPoints) {
+      vertex(pt.x, pt.y);
+    }
+    endShape();
+
+    // Retrieve (trimmed) part animated in solid red
+    let remaining = floor(threadPoints.length * (1 - fraction));
+    if (remaining > 1) {
+      stroke(255, 0, 0); // Solid red
       beginShape();
-      for (let i = 0; i < trimmedLength; i++) {
+      for (let i = 0; i < remaining; i++) {
         vertex(threadPoints[i].x, threadPoints[i].y);
       }
       endShape();
     }
 
-    // At the end of break, draw the last cycle as a faint trace
     if (fraction >= 1) {
-      stroke(255, 0, 0, 50);
-      beginShape();
-      for (let pt of threadPoints) {
-        vertex(pt.x, pt.y);
-      }
-      endShape();
-
       if (currentCycle < totalCycles) {
         currentCycle++;
         prepareThread();
