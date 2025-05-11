@@ -19,22 +19,24 @@ function setup() {
   topControls = select('#topControls');
   topRestartBtn = select('#topRestartBtn');
 
-  topRestartBtn.mousePressed(() => {
+  resetBtn.mousePressed(() => {
     state = 'idle';
     paused = false;
     hasCompletedRound = false;
     threadPoints = [];
     pastCycles = [];
     clear();
-
+  
     select('.controls').removeClass('hidden');
     focusInput.removeAttribute('disabled');
     breakInput.removeAttribute('disabled');
     cycleInput.removeAttribute('disabled');
     startBtn.removeAttribute('disabled');
     startBtn.removeClass('hidden');
-
-    topControls.addClass('hidden');
+  
+    continueBtn.addClass('hidden');
+    resetBtn.addClass('hidden');
+    resetBtn.removeClass('running');
   });
 
   createCanvas(windowWidth, windowHeight);
@@ -48,7 +50,7 @@ function setup() {
   startBtn = select('#startBtn');
   pauseOverlay = select('#pauseOverlay');
   continueBtn = select('#continueBtn');
-  restartBtn = select('#restartBtn');
+  resetBtn = select('#resetBtn');
 
   startBtn.mousePressed(() => startClock(false));
   continueBtn.mousePressed(() => startClock(false));
@@ -107,7 +109,9 @@ function startClock(isRestart) {
   cycleInput.attribute('disabled', '');
   startBtn.attribute('disabled', '');
   continueBtn.addClass('hidden');
-  restartBtn.addClass('hidden');
+  resetBtn.removeClass('hidden');
+  resetBtn.addClass('running'); 
+  
 
   prepareThread();
   state = 'focus';
@@ -129,9 +133,11 @@ function togglePause() {
       breakStartTime += millis() - pauseOffset;
     }
     pauseOverlay.html('Pause');
+    pauseOverlay.removeClass('resume-mode');
   } else {
     pauseOffset = millis();
     pauseOverlay.html('Resume');
+    pauseOverlay.addClass('resume-mode');
   }
   paused = !paused;
 }
@@ -218,8 +224,10 @@ function draw() {
         startBtn.addClass('hidden');
 
         continueBtn.removeClass('hidden');
-        restartBtn.removeClass('hidden');
+        resetBtn.removeClass('hidden');
+        resetBtn.removeClass('running');
         hasCompletedRound = true;
+        
       }
     }
   }
