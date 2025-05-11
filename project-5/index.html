@@ -7,6 +7,29 @@
   <link rel="stylesheet" href="project5.css" />
 </head>
 <body>
+  <div class="controls" id="controlPanel">
+    <label>Focus(min): <input id="focusInput" type="number" value="25" min="1" max="50" /></label>
+    <label>Break(min): <input id="breakInput" type="number" value="5" min="1" max="15" /></label>
+    <label>Cycles: <input id="cycleInput" type="number" value="3" min="1" max="10" /></label>
+    <button id="startBtn">Start</button>
+  </div>
+
+  <div id="pauseOverlay" class="hidden">||</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.min.js"></script>
+  <script src="project5.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thread Focus Clock</title>
+  <link rel="stylesheet" href="project5.css" />
+</head>
+<body>
   <div class="controls">
     <label>Focus (min): <input id="focusInput" type="number" value="25" min="1" max="50" /></label>
     <label>Break (min): <input id="breakInput" type="number" value="5" min="1" max="15" /></label>
@@ -17,4 +40,4 @@
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.min.js"></script>
   <script src="project5.js"></script>
 </body>
-</html>
+</html> -->
