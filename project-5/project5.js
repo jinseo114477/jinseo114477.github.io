@@ -41,7 +41,6 @@ function startClock() {
   breakInput.value(bm);
   cycleInput.value(cc);
 
-  // 🧼 Only clear if previous session was fully completed
   if (state === 'done') {
     clear();
   }
@@ -95,7 +94,7 @@ function draw() {
   if (paused || state === 'idle' || state === 'done') return;
 
   if (state === 'focus') {
-    stroke(255, 0, 0); // Solid red
+    stroke(255, 0, 0); 
     let elapsed = millis() - startTime;
     let fraction = elapsed / focusDuration;
 
@@ -128,8 +127,7 @@ function draw() {
 
     background(255);
 
-    // Faint lines from all past focus threads
-    stroke(255, 0, 0, 50);
+    stroke(255, 0, 0, 30);
     noFill();
     for (let path of pastCycles) {
       beginShape();
@@ -139,18 +137,16 @@ function draw() {
       endShape();
     }
 
-    // Faint full line of current thread as trace
-    stroke(255, 0, 0, 50);
+    stroke(255, 0, 0, 30);
     beginShape();
     for (let pt of threadPoints) {
       vertex(pt.x, pt.y);
     }
     endShape();
 
-    // Retrieve (trimmed) part animated in solid red
     let remaining = floor(threadPoints.length * (1 - fraction));
     if (remaining > 1) {
-      stroke(255, 0, 0); // Solid red
+      stroke(255, 0, 0); 
       beginShape();
       for (let i = 0; i < remaining; i++) {
         vertex(threadPoints[i].x, threadPoints[i].y);
