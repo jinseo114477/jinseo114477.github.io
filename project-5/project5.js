@@ -181,12 +181,9 @@ function draw() {
         startBtn.attribute('disabled', ''); 
         startBtn.addClass('hidden');
 
-        if (hasCompletedRound) {
-          continueBtn.removeClass('hidden');
-          restartBtn.removeClass('hidden');
-        } else {
-          hasCompletedRound = true;
-        }
+        continueBtn.removeClass('hidden');
+        restartBtn.removeClass('hidden');
+        hasCompletedRound = true;
       }
     }
   }

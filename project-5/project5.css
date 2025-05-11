@@ -79,9 +79,12 @@ button {
   pointer-events: none;
 }
 
-#continueBtn,
+#continueBtn {
+  margin-left: -3rem;
+}
+
 #restartBtn {
-  margin-left: 10px;
+  margin-left: .5rem;
 }
 
 .hidden {
