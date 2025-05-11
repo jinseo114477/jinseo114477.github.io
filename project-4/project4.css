@@ -1,0 +1,58 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    background: #0a0f1f;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Layout Container */
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Glass Zone (Right Half) */
+  .glass {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Draggable Balls */
+  .ball {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #ff6f2c;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 120px;
+    cursor: grab;
+    user-select: none;
+    z-index: 2;
+    transition: filter 0.2s ease;
+  }
+  
+  /* Initial Positions */
+  #ball1 { top: 100px; left: 100px; }
+  #ball2 { top: 100px; left: 250px; }
+  #ball3 { top: 250px; left: 100px; }
+  #ball4 { top: 250px; left: 250px; }
+  

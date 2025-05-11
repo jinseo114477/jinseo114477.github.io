@@ -122,6 +122,26 @@ body {
     background-color: #FFA8A9;
     transform: scale(1.05);
   }
+
+  .ingredient-btn3 {
+    background-color: transparent; 
+    color: white;
+    border: 0.3125rem solid white; 
+    font-family: "umami";
+    font-size: 1.28125rem;
+    font-weight: 800;
+    line-height: normal;
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    width: auto; 
+  }
+
+  .ingredient-btn3:hover {
+    border-color: #FFD9D9;
+    color: white;
+    background-color: #FFA8A9;
+    transform: scale(1.05);
+  }
   
   .blur-bg {
     background-color: white; 
