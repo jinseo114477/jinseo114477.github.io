@@ -102,18 +102,10 @@ button {
   margin-left: -3rem;
 }
 
-#restartBtn {
-  margin-left: .1rem;
+#topControls button,
+#controlPanel button {
+  margin-right: 3px;
 }
-
-#resetBtn.running {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 11;
-  margin: 0;
-}
-
 
 .hidden {
   opacity: 0;
@@ -126,6 +118,9 @@ button {
   pointer-events: auto;
 }
 
+#controlPanel #resetBtn {
+  margin-left: 5px;
+}
 
 #topControls {
   position: fixed;
@@ -133,7 +128,7 @@ button {
   left: 10px;
   z-index: 11;
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 
 #topControls.hidden {
@@ -143,18 +138,19 @@ button {
 
 #topControls button {
   font-size: 12px;
-  font-weight: bold;
-  background: transparent;
+  font-weight: normal;
+  background: white;
   color: red;
   border: 0.1rem solid red;
   padding: 4px 8px;
   border-radius: 3px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  /* transition: 0.3s ease, transform 0.1s ease; */
 }
 
 #topControls button:hover {
-  background-color: red;
+  background-color: #e10101; 
+  color:  #ff7c7c;
 }
 
 @media (max-width: 600px) {

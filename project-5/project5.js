@@ -1,5 +1,5 @@
 let focusInput, breakInput, cycleInput, startBtn, pauseOverlay;
-let continueBtn, restartBtn;
+let continueBtn, resetBtn;
 let hasCompletedRound = false;
 
 let state = 'idle'; 
@@ -13,11 +13,36 @@ let totalCycles = 1;
 let currentCycle = 1;
 let paused = false;
 let pauseOffset = 0;
-let topControls, topRestartBtn;
+let topControls;
+
+function moveResetToTopControls() {
+  const topControls = select('#topControls');
+  const pauseBtn = select('#pauseOverlay');
+  const resetBtnEl = select('#resetBtn');
+  if (topControls && pauseBtn && resetBtnEl) {
+    topControls.elt.insertBefore(resetBtnEl.elt, pauseBtn.elt);
+  }
+}
+
+function moveResetToControlPanel() {
+  const controlPanel = select('#controlPanel');
+  const continueBtn = select('#continueBtn');
+  const resetBtnEl = select('#resetBtn');
+  if (controlPanel && continueBtn && resetBtnEl) {
+    controlPanel.elt.insertBefore(resetBtnEl.elt, continueBtn.elt.nextSibling);
+  }
+}
 
 function setup() {
   topControls = select('#topControls');
-  topRestartBtn = select('#topRestartBtn');
+  pauseOverlay = select('#pauseOverlay');
+  
+  focusInput = select('#focusInput');
+  breakInput = select('#breakInput');
+  cycleInput = select('#cycleInput');
+  startBtn = select('#startBtn');
+  continueBtn = select('#continueBtn');
+  resetBtn = select('#resetBtn');
 
   resetBtn.mousePressed(() => {
     state = 'idle';
@@ -37,6 +62,8 @@ function setup() {
     continueBtn.addClass('hidden');
     resetBtn.addClass('hidden');
     resetBtn.removeClass('running');
+    pauseOverlay.addClass('hidden');
+    topControls.addClass('hidden');
   });
 
   createCanvas(windowWidth, windowHeight);
@@ -44,36 +71,13 @@ function setup() {
   stroke(255, 0, 0);
   strokeWeight(1.5);
 
-  focusInput = select('#focusInput');
-  breakInput = select('#breakInput');
-  cycleInput = select('#cycleInput');
-  startBtn = select('#startBtn');
-  pauseOverlay = select('#pauseOverlay');
-  continueBtn = select('#continueBtn');
-  resetBtn = select('#resetBtn');
-
   startBtn.mousePressed(() => startClock(false));
   continueBtn.mousePressed(() => startClock(false));
-  restartBtn.mousePressed(() => startClock(true));
-
   pauseOverlay.mousePressed(togglePause);
 }
 
 function windowResized() {
-  resizing = true;
-
-  if (state !== 'idle' && !paused) {
-    let newX = windowWidth / 2;
-    let deltaX = newX - x;
-    x = newX;
-    for (let pt of threadPoints) {
-      pt.x += deltaX;
-    }
-  }
-
   resizeCanvas(windowWidth, windowHeight);
-
-  setTimeout(() => resizing = false, 200); 
 }
 
 function startClock(isRestart) {
@@ -109,8 +113,8 @@ function startClock(isRestart) {
   cycleInput.attribute('disabled', '');
   startBtn.attribute('disabled', '');
   continueBtn.addClass('hidden');
+  moveResetToTopControls();
   resetBtn.removeClass('hidden');
-  resetBtn.addClass('running'); 
   
 
   prepareThread();
@@ -224,10 +228,9 @@ function draw() {
         startBtn.addClass('hidden');
 
         continueBtn.removeClass('hidden');
+        moveResetToControlPanel();
         resetBtn.removeClass('hidden');
-        resetBtn.removeClass('running');
         hasCompletedRound = true;
-        
       }
     }
   }
