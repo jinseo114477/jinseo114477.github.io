@@ -62,7 +62,6 @@ function startClock() {
   prepareThread();
   state = 'focus';
   startTime = millis();
-  loop();
 }
 
 function prepareThread() {
@@ -74,19 +73,22 @@ function prepareThread() {
 
 function togglePause() {
   if (paused) {
-    startTime += millis() - pauseOffset;
-    breakStartTime += millis() - pauseOffset;
+    if (state === 'focus') {
+      startTime += millis() - pauseOffset;
+    } else if (state === 'break') {
+      breakStartTime += millis() - pauseOffset;
+    }
     pauseOverlay.html('||');
-    loop();
   } else {
     pauseOffset = millis();
     pauseOverlay.html('▶');
-    noLoop();
   }
   paused = !paused;
 }
 
 function draw() {
+  if (paused || state === 'idle' || state === 'done') return;
+
   if (state === 'focus') {
     let elapsed = millis() - startTime;
     let fraction = elapsed / focusDuration;
@@ -120,9 +122,11 @@ function draw() {
 
     background(255);
 
+    // Draw faint traces from past cycles except current one
     stroke(255, 0, 0, 50);
     noFill();
-    for (let path of pastCycles) {
+    for (let i = 0; i < pastCycles.length - 1; i++) {
+      let path = pastCycles[i];
       beginShape();
       for (let pt of path) {
         vertex(pt.x, pt.y);
@@ -130,17 +134,26 @@ function draw() {
       endShape();
     }
 
-    stroke(255, 0, 0);
-    let remaining = floor(threadPoints.length * (1 - fraction));
-    if (remaining > 1) {
+    // Animate retrieval of current thread
+    let trimmedLength = floor(threadPoints.length * (1 - fraction));
+    if (trimmedLength > 1) {
+      stroke(255, 0, 0);
       beginShape();
-      for (let i = 0; i < remaining; i++) {
+      for (let i = 0; i < trimmedLength; i++) {
         vertex(threadPoints[i].x, threadPoints[i].y);
       }
       endShape();
     }
 
+    // At the end of break, draw the last cycle as a faint trace
     if (fraction >= 1) {
+      stroke(255, 0, 0, 50);
+      beginShape();
+      for (let pt of threadPoints) {
+        vertex(pt.x, pt.y);
+      }
+      endShape();
+
       if (currentCycle < totalCycles) {
         currentCycle++;
         prepareThread();
