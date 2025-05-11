@@ -10,7 +10,7 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
-  background:transparent;
+  background: transparent;
   border-radius: 10px;
   z-index: 10;
   padding: 10px;
@@ -30,10 +30,22 @@ label {
 }
 
 input {
-  width: 50px;
-  padding: 2px 6px;
+  border: none;
+  border-bottom: 1px solid red;
+  background: transparent;
   font-size: 12px;
-  margin-left: 4px;
+  color: red;
+  padding: 2px 4px;
+  outline: none;
+  width: 50px;
+}
+
+input:focus {
+  border-bottom: 2px solid red;
+}
+
+input::placeholder {
+  color: rgba(255, 0, 0, 0.5);
 }
 
 button {
@@ -44,6 +56,7 @@ button {
   color: white;
   border: none;
   border-radius: 3px;
+  transition: opacity 0.3s ease;
 }
 
 #pauseOverlay {
@@ -65,6 +78,23 @@ button {
   opacity: 0;
   pointer-events: none;
 }
+
+#continueBtn,
+#restartBtn {
+  margin-left: 10px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#continueBtn:not(.hidden),
+#restartBtn:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* body {
     margin: 0;
     padding: 0;

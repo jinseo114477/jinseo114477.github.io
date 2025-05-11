@@ -1,4 +1,6 @@
 let focusInput, breakInput, cycleInput, startBtn, pauseOverlay;
+let continueBtn, restartBtn;
+let hasCompletedRound = false;
 
 let state = 'idle'; 
 let focusDuration, breakDuration;
@@ -23,8 +25,13 @@ function setup() {
   cycleInput = select('#cycleInput');
   startBtn = select('#startBtn');
   pauseOverlay = select('#pauseOverlay');
+  continueBtn = select('#continueBtn');
+  restartBtn = select('#restartBtn');
 
-  startBtn.mousePressed(startClock);
+  startBtn.mousePressed(() => startClock(false));
+  continueBtn.mousePressed(() => startClock(false));
+  restartBtn.mousePressed(() => startClock(true));
+
   pauseOverlay.mousePressed(togglePause);
 }
 
@@ -32,7 +39,7 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-function startClock() {
+function startClock(isRestart) {
   let fm = constrain(int(focusInput.value()) || 25, 1, 50);
   let bm = constrain(int(breakInput.value()) || 5, 1, 15);
   let cc = constrain(int(cycleInput.value()) || 1, 1, 10);
@@ -41,15 +48,16 @@ function startClock() {
   breakInput.value(bm);
   cycleInput.value(cc);
 
-  if (state === 'done') {
+  if (isRestart) {
     clear();
+    pastCycles = [];
   }
 
   focusDuration = fm * 60 * 1000;
   breakDuration = bm * 60 * 1000;
   totalCycles = cc;
   currentCycle = 1;
-  pastCycles = [];
+  threadPoints = [];
 
   pauseOffset = 0;
   paused = false;
@@ -62,6 +70,8 @@ function startClock() {
   breakInput.attribute('disabled', '');
   cycleInput.attribute('disabled', '');
   startBtn.attribute('disabled', '');
+  continueBtn.addClass('hidden');
+  restartBtn.addClass('hidden');
 
   prepareThread();
   state = 'focus';
@@ -137,7 +147,8 @@ function draw() {
       endShape();
     }
 
-    stroke(255, 0, 0, 30);
+    let traceAlpha = 30 * (1 - fraction);
+    stroke(255, 0, 0, traceAlpha);
     beginShape();
     for (let pt of threadPoints) {
       vertex(pt.x, pt.y);
@@ -167,7 +178,15 @@ function draw() {
         focusInput.removeAttribute('disabled');
         breakInput.removeAttribute('disabled');
         cycleInput.removeAttribute('disabled');
-        startBtn.removeAttribute('disabled');
+        startBtn.attribute('disabled', ''); 
+        startBtn.addClass('hidden');
+
+        if (hasCompletedRound) {
+          continueBtn.removeClass('hidden');
+          restartBtn.removeClass('hidden');
+        } else {
+          hasCompletedRound = true;
+        }
       }
     }
   }
