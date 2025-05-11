@@ -1,9 +1,16 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   overflow: hidden;
   background: white;
   font-family: sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .controls {
@@ -14,7 +21,7 @@ body {
   border-radius: 10px;
   z-index: 10;
   padding: 10px;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.1s , opacity 0.4s ease;
 }
 
 .controls.hidden {
@@ -59,19 +66,28 @@ button {
   transition: opacity 0.3s ease;
 }
 
-#pauseOverlay {
+#pauseOverlay #topRestartBtn{
   position: fixed;
   top: 20px;
   left: 20px;
-  font-size: 30px;
+  font-size: 12px;
   font-weight: bold;
-  color: red;
-  background: transparent;
-  padding: 8px 12px;
-  border-radius: 10px;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
   cursor: pointer;
   z-index: 11;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: opacity 0.3s ease;
+}
+
+#pauseOverlay:hover {
+  background-color: #e10101; 
+}
+
+#pauseOverlay:active {
+  transform: scale(0.97);
 }
 
 #pauseOverlay.hidden {
@@ -84,7 +100,7 @@ button {
 }
 
 #restartBtn {
-  margin-left: .5rem;
+  margin-left: .1rem;
 }
 
 .hidden {
@@ -97,6 +113,88 @@ button {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* #topRestartBtn {
+  font-size: 0;
+  color: transparent;
+  visibility: hidden;
+} */
+
+#topControls {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+}
+
+#topControls.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#topControls button {
+  font-size: 12px;
+  font-weight: bold;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#topControls button:hover {
+  background-color: #cc0000;
+}
+
+@media (max-width: 600px) {
+  #topControls {
+    top: 10px;
+    left: 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #topControls button {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .controls {
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  label {
+    font-size: 10px;
+  }
+
+  input {
+    width: 40px;
+    font-size: 10px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+/* #topControls button:active {
+  transform: scale(0.97);
+} */
+
+
 
 /* body {
     margin: 0;

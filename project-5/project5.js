@@ -13,8 +13,30 @@ let totalCycles = 1;
 let currentCycle = 1;
 let paused = false;
 let pauseOffset = 0;
+let topControls, topRestartBtn;
 
 function setup() {
+  topControls = select('#topControls');
+  topRestartBtn = select('#topRestartBtn');
+
+  topRestartBtn.mousePressed(() => {
+    state = 'idle';
+    paused = false;
+    hasCompletedRound = false;
+    threadPoints = [];
+    pastCycles = [];
+    clear();
+
+    select('.controls').removeClass('hidden');
+    focusInput.removeAttribute('disabled');
+    breakInput.removeAttribute('disabled');
+    cycleInput.removeAttribute('disabled');
+    startBtn.removeAttribute('disabled');
+    startBtn.removeClass('hidden');
+
+    topControls.addClass('hidden');
+  });
+
   createCanvas(windowWidth, windowHeight);
   noFill();
   stroke(255, 0, 0);
@@ -36,7 +58,20 @@ function setup() {
 }
 
 function windowResized() {
+  resizing = true;
+
+  if (state !== 'idle' && !paused) {
+    let newX = windowWidth / 2;
+    let deltaX = newX - x;
+    x = newX;
+    for (let pt of threadPoints) {
+      pt.x += deltaX;
+    }
+  }
+
   resizeCanvas(windowWidth, windowHeight);
+
+  setTimeout(() => resizing = false, 200); 
 }
 
 function startClock(isRestart) {
@@ -64,7 +99,8 @@ function startClock(isRestart) {
 
   select('.controls').addClass('hidden');
   pauseOverlay.removeClass('hidden');
-  pauseOverlay.html('||');
+  topControls.removeClass('hidden');
+  pauseOverlay.html('Pause');   
 
   focusInput.attribute('disabled', '');
   breakInput.attribute('disabled', '');
@@ -92,10 +128,10 @@ function togglePause() {
     } else if (state === 'break') {
       breakStartTime += millis() - pauseOffset;
     }
-    pauseOverlay.html('||');
+    pauseOverlay.html('Pause');
   } else {
     pauseOffset = millis();
-    pauseOverlay.html('▶');
+    pauseOverlay.html('Resume');
   }
   paused = !paused;
 }
