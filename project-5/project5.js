@@ -106,7 +106,7 @@ function startClock(isRestart) {
   select('.controls').addClass('hidden');
   pauseOverlay.removeClass('hidden');
   topControls.removeClass('hidden');
-  pauseOverlay.html('Pause');   
+  pauseOverlay.html('pause');   
 
   focusInput.attribute('disabled', '');
   breakInput.attribute('disabled', '');
@@ -136,11 +136,11 @@ function togglePause() {
     } else if (state === 'break') {
       breakStartTime += millis() - pauseOffset;
     }
-    pauseOverlay.html('Pause');
+    pauseOverlay.html('pause');
     pauseOverlay.removeClass('resume-mode');
   } else {
     pauseOffset = millis();
-    pauseOverlay.html('Resume');
+    pauseOverlay.html('resume');
     pauseOverlay.addClass('resume-mode');
   }
   paused = !paused;
