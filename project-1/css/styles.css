@@ -70,13 +70,13 @@ a {
 }
 
 .home-image {
-    width: 4vw; /* Adjust the size of the image */
-    height: auto; /* Maintain aspect ratio */
+    width: 4vw; 
+    height: auto; 
     
 }
 
 .fixed-home-button:hover .home-image {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1); 
 }
 
 /* Navigation
@@ -885,7 +885,6 @@ a {
     white-space: pre-wrap;
     width: 90%;
     /* margin-top: 52vh; */
-   
 }
 
 .ari-text{
@@ -903,12 +902,12 @@ a {
     background-color: white;
     height: 35vh;
     width: 50%;
-    display: flex; /* Enables Flexbox */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    top: 403%; /* Center vertically relative to the viewport */
-    left: 50%; /* Center horizontally relative to the viewport */
-    transform: translate(-50%, -50%); /* Offset the box by half its size to center */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    top: 403%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
 }
 
 .back-button-ari-text {
@@ -918,16 +917,15 @@ a {
     height: 10%;
     width: 100%;
     text-align: center;
-    display: flex; /* Ensures content inside is flex-aligned */
-    justify-content: center; /* Centers text horizontally */
-    align-items: center; /* Centers text vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     font-family: "Bakbak", sans-serif;
     font-size: 4.1vh;
     font-weight: 500;
     line-height: 93%;
 }
 
-/* other Specific */
 .heading-box-other{
     position: absolute;
     background-color: #915C83;
@@ -1003,8 +1001,8 @@ a {
     height: 10%;
     width: 10%;
     height: auto; 
-    display: block; /* Ensures it doesn't have extra space */
-    margin: 0 auto; /* Centers the image */
+    display: block; 
+    margin: 0 auto; 
 
 }
 
@@ -1022,7 +1020,6 @@ a {
 
 
 
-
   /* Container for the hoverable text */
 .hover-container {
     position: relative; /* Important for positioning the tooltip */
@@ -1033,11 +1030,11 @@ a {
 }
 
 .hover-container:hover {
-    color: black; /* Ensure the letter R remains visible on hover */
+    color: black; 
 }
 
 .hover-letter {
-    color: white; /* Ensures the letter is always visible */
+    color: white; 
 }
 
 /* Hidden text */
@@ -1074,7 +1071,7 @@ a {
     /* border-radius: 0.5rem; */
     padding: .7rem 1.5rem;
     width: 10vw;
-    min-width: 10vw; /* Prevents overly wide boxes */
+    min-width: 10vw; 
     max-height: 6.3vh;
     position: absolute;
     transform: translateX(-50%);
@@ -1189,7 +1186,7 @@ a {
     top: -22vh;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 1.2rem;
     /* align-items: center; */
     font-size: 1.1rem;
     color: black;
