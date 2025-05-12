@@ -1,105 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap');
 
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #FFD1ED;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FFD1ED;
+  background-image: url('back.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Unbounded', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 6.31rem;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 10rem;
+}
+
+.word-item {
+  position: relative;
+  width: fit-content;
+  width: 10rem; /* or whatever size fits your layout */
+  height: 2.5rem; /* same as font-size */
+  display: inline-block;
+  text-decoration: none;
+}
+
+.word-item span {
     display: flex;
+    align-items: center;
     justify-content: center;
-    background-image: url('back.png');
-    background-size: cover;      
-    background-position: center;  
-    background-repeat: no-repeat; 
-  }
-
-  .container {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 5rem;
-    gap: 10px;
-    width: auto; */
-    width: 24.5rem;
-    height: 5.375rem;
-    flex-shrink: 0;
-    aspect-ratio: 196/43;
-  }
-
-  h1{
-    color: #FFF;
-    display:flex;
-    margin-top: 6.31rem;
-    align-items: flex-start;
-    text-align: center;
-    font-family: 'Unbounded';
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 122.969%;
-    text-transform: uppercase;
-  }
-
-  .container2 {
-    width: 97.875rem;
-    height: 21.4375rem;
-    flex-shrink: 0;
-    aspect-ratio: 1566/343;
-  }
-
-  h2{
-    color: #FFF;
-    display:flex;
-    margin-top: 6.31rem;
-    align-items: flex-start;
-    text-align: center;
-    font-family: 'Unbounded';
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 122.969%; 
-    text-transform: uppercase;
-  }
-  
- 
-  
-  .hover-link {
-    display: block;
-    width: 390px;       
-    height: 290px; /* ✅ add this line */    
-  }
-  
-  .hover-image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-  }
-  
-  .default-img,
-  .hover-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #FFF;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    z-index: 1;
   }
-  
-  .default-img {
-    opacity: 1;
-  }
-  
-  .hover-img {
+
+.hover-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;           /* make image smaller */
+    height: auto;         /* maintain aspect ratio */
+    transform: translate(-50%, -50%);  /* center the smaller image */
+    object-fit: contain;
     opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
   }
-  
-  .hover-image:hover .default-img {
-    opacity: 0;
-  }
-  
-  .hover-image:hover .hover-img {
-    opacity: 1;
-    transform: scale(1.15);
+
+.word-item:hover span {
+  opacity: 0;
+}
+
+.word-item:hover .hover-img {
+  opacity: 1;
+}
+
+.word-item span {
+    z-index: 1;
+    position: relative;
   }
