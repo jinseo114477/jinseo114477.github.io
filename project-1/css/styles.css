@@ -1171,6 +1171,7 @@ a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    flex-direction: column;
     display: flex;
     font-weight: 600;
     justify-content: center;
@@ -1184,17 +1185,20 @@ a {
 
 .button {
     background-color: transparent;
-    position:relative;
-    top: -27vh;
+    /* position:relative; */
+    top: -22vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 1.2vw;
+    padding: 2rem;
+    /* align-items: center; */
+    font-size: 1.1rem;
     color: black;
     text-decoration: none;
-    font-family: "custom1", sans-serif;
+    gap:2rem;
+    /* font-family: "custom1", sans-serif; */
     transition: background-color 0.3s;
   }
+  
   .yes {
     padding: 2%;
     background-color: white;
