@@ -567,10 +567,10 @@ a {
 .henry-text {
     color: #F8F1E5;
     font-family: "Asap";
-    font-size: 4.1vh;
-    font-weight: 500;
-    line-height: 120%;
-    margin-top: 45px;
+    font-size: 3.1vh;
+    font-weight: 300;
+    line-height: 125%;
+    margin-top: 100px;
     padding: 0;
     width: 90%;
     max-width: 800px;
@@ -837,7 +837,7 @@ a {
     font-size: 24.6vh;
     font-weight: 500;
     line-height: 93%;
-    margin-top: 1vh; /* Adds spacing above the main text */
+    margin-top: 1vh; 
 }
 
 .ari-uzi-main-text-span{
@@ -857,7 +857,7 @@ a {
 }
 
 .container {
-    margin-top: 6vh; /* Adds spacing below the fixed navigation */
+    margin-top: 6vh; 
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -867,12 +867,12 @@ a {
 
 .box-ari-text, .box-uzi-text {
     background-color: white;
-    flex: 1; /* Makes columns take equal width */
-    max-width: 130%; /* Restricts each column width */
+    flex: 1; 
+    max-width: 130%; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left:155px; /* Adds spacing inside the boxes */
+    padding-left:155px; 
     max-width: 100%;
     height: auto;
 }
