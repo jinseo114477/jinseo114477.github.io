@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #e5f5e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  svg {
+    width: 90vw;
+    height: auto;
+  }
+  
+  .flower {
+    animation: pulse 3s ease-in-out infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+  
+  .sun-petals {
+    animation: spin 10s linear infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Random delays for each flower */
+  .flower:nth-of-type(1) {
+    animation-delay: 1.67s;
+  }
+  .flower:nth-of-type(2) {
+    animation-delay: 0.31s;
+  }
+  .flower:nth-of-type(3) {
+    animation-delay: 1.89s;
+  }
+  .flower:nth-of-type(4) {
+    animation-delay: 0.84s;
+  }
+  
